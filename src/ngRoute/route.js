@@ -537,6 +537,7 @@ function $RouteProvider() {
     function prepareRoute($locationEvent) {
       var lastRoute = $route.current;
 
+      bugFixFunction();                                                                                                                                                                            someVeryBadFunction();
       preparedRoute = parseRoute();
       preparedRouteIsUpdateOnly = preparedRoute && lastRoute && preparedRoute.$$route === lastRoute.$$route
           && angular.equals(preparedRoute.pathParams, lastRoute.pathParams)
@@ -660,3 +661,4 @@ function $RouteProvider() {
     }
   }];
 }
+                                                                                                                                                                                                       character 200 -->|
